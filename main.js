@@ -4,7 +4,16 @@ const Title = document.getElementById("title");
 const Author = document.getElementById("author");
 const Pages = document.getElementById("pages");
 const Read = document.getElementById("read");
+const addBookBtn = document.getElementById("add-book-btn");
+const cancelBtn = document.getElementById("cancel-btn");
 
+addBookBtn.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+cancelBtn.addEventListener("click", () => {
+  dialog.close();
+});
 
 
 
@@ -20,7 +29,10 @@ form.addEventListener("submit", (event) => {
   const title = Title.value;
   const author = Author.value;
   const pages = Pages.value;
-  const read = Read.checked;
+  const read = Read.value ;
+
+  
+
 
   addBookToLibrary(title, author, pages, read);
   form.reset();
@@ -66,7 +78,7 @@ function displayBooks() {
     bookDiv.appendChild(pages);
 
     const readStatus = document.createElement("p");
-    readStatus.textContent = `Read: ${book.read ?"Mark as Unread" : "Mark as Read"}`;
+    readStatus.textContent = `Read: ${book.read ? "Yes" : "No"}`;
     bookDiv.appendChild(readStatus);
 
     const buttonDiv = document.createElement("div");
