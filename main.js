@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
   const title = Title.value;
   const author = Author.value;
   const pages = Pages.value;
-  const read = Read.value ;
+  const read = Read.checked; ;
 
   
 
@@ -118,3 +118,4 @@ Book.prototype.toggleRead = function() {
 
 addBookToLibrary("The Hobbit", "Tolkien", 310, false);
 addBookToLibrary("1984", "Orwell", 328, true);
+

@@ -98,11 +98,55 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-dialog{
- 
+dialog {
+
+  margin: auto;
+  padding: 20px;
   border: none;
   border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
+dialog button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+form button {
+    display: flex;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
 }
