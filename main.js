@@ -7,22 +7,19 @@ const Read = document.getElementById("read");
 const addBookBtn = document.getElementById("add-book-btn");
 const cancelBtn = document.getElementById("cancel-btn");
 
-addBookBtn.addEventListener("click", () => {
+addBookBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   dialog.showModal();
 });
 
-cancelBtn.addEventListener("click", () => {
+cancelBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   dialog.close();
 });
 
 
-
-
-
-
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   const dialog = document.getElementById("book-dialog");
   dialog.showModal();   
 
